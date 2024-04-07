@@ -1,0 +1,72 @@
+#container {
+	overflow: hidden;
+	height: 400px;
+}
+
+#unit1,
+#unit2,
+#unit3 {
+	width: 300px;
+	height: 200px;
+	border: 1px black solid;
+	float: left;
+	margin-left: 15px;
+	box-shadow: 5px 5px 5px #666;
+	position: relative;
+}
+
+.link {
+	display: block;
+	background-color: rgba(255, 255, 255, .8);
+	color: #000000;
+	font-size: 2rem;
+	font-weight: bold;
+	text-decoration: none;
+	padding-left: 10px;
+	border-left: 10px green solid;
+}
+
+select {
+	width: 260px;
+	height: 30px;
+	position: absolute;
+	top: 160px;
+	left: 20px;
+}
+
+.bg_bili {
+	background: url(../img/bili.jpg) center center;
+}
+
+.bg_jd {
+	background: url(../img/jd.jpg) center center;
+}
+
+.bg_myweb {
+	background: url(../img/myweb.png) center center;
+}
+
+.bg_blank {
+	background-color: #FFFFFF;
+}
+
+.bg_bili,
+.bg_jd,
+.bg_myweb,
+.bg_blank {
+	background-size: cover;
+	width: 300px;
+	height: 200px;
+	border: 1px black solid;
+	float: left;
+	margin-left: 15px;
+	box-shadow: 5px 5px 5px #666;
+	position: relative;
+}
+
+p {
+	clear: both;
+	position: absolute;
+	top: 230px;
+	left: 100px;
+}

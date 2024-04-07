@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var bk; //空白image对象
+			var flag = 0; //0:开始处理; 1:过程; 2:完成;
+			
+			Image.prototype.srcid = 0; //添加srcid属性：用于图片编排
+			Image.prototype.disp = function() { //刷新方法：显示符合srcid属性的图像
+				if (this.srcid < 10)
+					this.src = "images/t66_0" + this.srcid + ".jpg";
+				else
+					this.src = "images/t66_" + this.srcid + ".jpg";
+			}
+			
+			function swap(x) { //交换函数; x for 点击的image的name数组; 交换BK与x的srcid属性
+				if (flag == 0) {
+					db(x);
+					if (bk != x) {
+						var i = bk.srcid;
+						bk.srcid = x.srcid;
+						x.srcid = i;
+					}
+				} 
+				else if (flag == 1) {
+					db(x);
+					if (bk != x) {
+						var i = bk.srcid;
+						bk.srcid = x.srcid;
+						x.srcid = i;
+						bk.disp();
+						x.disp();
+						bk=x;
+						over()
+					}
+				}
+				else return;
+			}
+			
+			function over() {
+				for (var i = 1; i < 16; i++) {
+					if (myimg[i-1].srcid != i)return;
+					}
+					flag = 2;
+					myimg[15].srcid = 16;
+					myimg[15].disp()
+					alert("拼图完成!");
+			}
+			function init(){
+				flag=0;
+				for(var i =0; i<16; i++)
+					myimg[i].srcid = i;
+				bk = myimg[0];
+				for(i =0; i<16; i++){
+					var t =Math.floor(Math.random()*16)
+					swap(myimg[t]);
+				}
+				for(i =0; i<16; i++) myimg[i].disp()
+				flag = 1;
+			}
+			function db(x){
+				var i,s1="";
+				for(i =0; i<16; i++){
+					if(i<10)s1+=" "+myimg[i].srcid+",";
+					else s1+= myimg[i].srcid+",";
+				}
+				s1+="x:"+x.srcid;
+				s1+="bk:"+bk.srcid;
+				console.info(s1);
+			}
+		</script>
+		<script src="../direct.js"></script>
+	</head>
+	<body>
+		<TABLE WIDTH=800 BORDER=0 CELLPADDING=0 CELLSPACING=0 align="center">
+			<TR>
+				<TD>
+					<IMG SRC="images/t66_01.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+				<TD>
+					<IMG SRC="images/t66_02.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+				<TD>
+					<IMG SRC="images/t66_03.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+				<TD>
+					<IMG SRC="images/t66_04.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+		                <td rowspan=4 width=400><img src="images/t66.jpg"></td>
+			</TR>
+			<TR>
+				<TD>
+					<IMG SRC="images/t66_05.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+				<TD>
+					<IMG SRC="images/t66_06.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+				<TD>
+					<IMG SRC="images/t66_07.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+				<TD>
+					<IMG SRC="images/t66_08.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+			</TR>
+			<TR>
+				<TD>
+					<IMG SRC="images/t66_09.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+				<TD>
+					<IMG SRC="images/t66_10.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+				<TD>
+					<IMG SRC="images/t66_11.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+				<TD>
+					<IMG SRC="images/t66_12.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+			</TR>
+			<TR>
+				<TD>
+					<IMG SRC="images/t66_13.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+				<TD>
+					<IMG SRC="images/t66_14.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+				<TD>
+					<IMG SRC="images/t66_15.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+				<TD>
+					<IMG SRC="images/t66_16.jpg" WIDTH=100 HEIGHT=100 name="myimg" onclick="swap(this)"></TD>
+			</TR>
+		</TABLE>
+		<button onclick="init()">开始</button>
+
+	</body>
+</html>

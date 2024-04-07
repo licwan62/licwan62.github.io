@@ -1,0 +1,33 @@
+#main{
+	margin: 0;
+	padding: 50px;
+}
+#myA_1{
+	display: block;
+	text-decoration: none;
+	font:  bold 2.5rem/1.5em "zkxw";
+	color: white;
+	background-color: #005AA0;
+	padding-left: 1em;
+	transition: .25s background-color linear .25s;
+}
+#myA_1:hover{
+	background-color: #F99826;
+}
+#videofather{;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+@media  screen and (max-width:1080px) and (min-width:800px){
+  .left_iframe, 
+  .right_iframe {
+    flex: 100%;
+  }
+}
+@media  screen and (max-width:2160px) and (min-width:1081px){
+  .left_iframe, 
+  .right_iframe {
+    flex: 50%;
+  }
+}
