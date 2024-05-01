@@ -1,0 +1,148 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+
+*{
+    background-color: black;
+    font-family: trebutchet MS;
+    color: white;
+}
+/* Styling for the logo in the navigation bar */
+.logo-link {
+  margin-left: 7%;
+}
+
+.logo {
+  margin: 25px;
+}
+/* Prevent hover effect on the logo */
+.logo-link:hover .logo, body-links-home {
+   overflow: hidden;
+   text-decoration: none;
+   font-family: 'Franklin Gothic Medium';
+}
+
+/* Navigation Bar about, menu, booking*/
+.header {
+   text-align: left;
+   padding: 20px 10px;
+   overflow: hidden;
+   text-decoration: none;
+   font-family: 'Franklin Gothic Medium';
+   background-color: black;
+ }
+ .header a:not(.logo-link, body-links-home) {
+   display: inline-block;
+   overflow: hidden;
+   text-decoration: none;
+   font-family: 'Franklin Gothic Medium';
+   font-size: 25px;
+   padding: 10px;
+   margin-bottom: 6%;
+   margin-left: 11%;
+   border-radius: 5px;
+ }
+ .header a:hover:not(.logo-link, body-links-home) {
+   /*hover changed to light blue*/
+   color: lightgreen;
+   overflow: hidden;
+   text-decoration: none;
+   font-family: 'Franklin Gothic Medium';
+ }
+
+  /*Header*/ 
+  /*columns and rows*/ 
+  .column {
+    float: left;
+    padding: 10px;
+}
+/* 4 columns - logo and nav bar */
+.column.side {
+  width: 80%;
+}
+  /* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+      /* Responsive layout - makes the two columns stack on        top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column.side, .column.middle {
+          width: 100%;
+        }
+        }
+ /*Footer*/ 
+ .footer a {
+ background-color: black;
+  overflow: hidden;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 20px;
+  margin-left: 35%;
+  margin-right: 10%;
+}
+.p1 {
+  overflow: hidden;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 20px;
+}
+
+       /*Body*/   
+      .whitebg {
+        background-color: white;
+        padding: 10px;
+        text-align: center;
+      }
+
+       /*This section is where all the differences from all pages will be*/      
+       /*Home/Index page*/ 
+       .body-links-home {
+        text-align: center;
+        background-color: white;
+       }
+
+       .body-links-home img {
+        width: 100%;
+        background-color: white;
+        padding: 5px;
+      }
+
+      .column1 {
+        float: left;
+        padding: 0%;
+        margin: 0%;
+        background-color: white;
+    }
+    /* 2 columns - logo and nav bar */
+    .column1.side {
+      color: black;
+      background-color: white;
+      width: 50%;
+    }
+.food {
+  width: 90%;
+  background-color: white;
+}
+p { 
+  color: black;
+  background-color: white;
+  padding-right: 20px;
+  float: left;
+  font-size: 20px;
+}
+
+/* Style the word "Rasai" to be green */
+.green {
+  color: #51AF2F;
+  background-color: white;
+  float: left;
+}
+
+h2 {
+  background-color: white;
+  color: black;
+  float: left;
+}
