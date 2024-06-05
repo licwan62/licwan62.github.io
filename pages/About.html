@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Styles/AllPages.css">
+    <link rel="stylesheet" href="../Styles/About.css">
+    <title>About</title>
+</head>
+    <body>
+        <div class="navbar">
+        <a href="index.html" class="logo-link"><img class="logo" src="../images/Logo.png" alt="Go to home page"></a>
+          <div class="NavHead">
+            <a href="About.html">About</a>
+            <a href="Menu.html">Menu</a>
+            <a href="Booking.html">Booking</a>
+            <a href="Login.html">Login</a>
+        </div>
+          <div class="dropdown">
+              <a href="javascript:void(0);" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+              <br><br><br><br>
+            <div class="dropdown-content">
+              <div class="header"> 
+              <div class="row">
+                <div class="column">
+                  <a href="About.html">About</a>
+                  <a href="Menu.html">Menu</a>
+                  <a href="Booking.html">Booking</a>
+                  <a href="Login.html">Login</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+        
+        <div class="row1">
+          <div class="column1 side">
+              <img class="food" src="../images/food1.png" alt="Sri lankan food"></a>
+          </div>
+          <div class="column1 side">
+              <h2>What is Rasai?</h2>
+              <p class="p1"><span class="green">Rasai</span> In Sinhalese means “tasty.” It reflects the authenticity,
+                   the richness, and the vibrancy of Sri Lanka’s diverse culinary traditions. Complex and vibrant,
+                    Sri Lankan cuisine is well known for its combination of herbs and spices and is centred around 
+                    many varieties of rice.<br><br>
+                    Coconut milk, oil and pulp also play a significant role in the cuisine, 
+                    as is preserved fish. A hub in the historical oceanic Silk Road, contact with foreign traders 
+                    brought new food items and cultural influences in addition to the local traditions of the country’s 
+                    ethnic groups, all of which have helped shaped the cuisine of Sri Lanka..</p>
+          </div>
+      </div>
+      <p class="p2">I have a passion for preparing authentic and tradition Sri Lankan meals, 
+          through trialling different combination of spices to bring out the best flavours of meat, 
+          seafood and vegetables. I am inspired to share my Sri Lankan heritage and culture through 
+          authentic dishes from my homeland.</p>
+
+  <div class="row1">
+      <div class="column1 side">
+          <h2 class="abouthead">About Me</h2>
+          <p class="Aboutme">My name is Dhammika, and I was born in Colombo, 
+              Sri Lanka, and having lived in Papua New Guinea for most of my schooling years, 
+              I migrated to New Zealand in 1999.<br><br>
+               I grew up where food was the centre of almost everything, 
+              from family gathering to special occasions. Yearly celebrations such as the Sinhala and Tamil 
+              New Year and Christmas means the preparation of authentic cuisine – that reflects the Sri Lankan 
+              tradition and made with intention and care.<br><br>
+              The passion to share the authentic cuisine of Sri Lanka has 
+              inspired me to open the doors to Rasai.<br><br>
+              I welcome you to my table!</p>
+      </div>
+      <div class="column1 side">
+          <img class="food" src="../images/Dhammika.png" alt="Dhammika"></a>
+          <br><br><br>
+      </div>
+  </div>
+
+
+        <footer>
+            <div class="footer">
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Menu.html">Menu</a></li>
+                        <li><a href="Booking.html">Booking</a></li>
+                        <li><a href="Login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contacts" id="contacts">
+                    <ul>
+                        <li><a>Contacts</a></li>
+                        <li><p><b>info@rasi.co.nz</b></p></li>
+                        <li><p><b>0210 452 333</b></p></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>    
+
+            <script>
+                function myFunction() {
+                  var x = document.getElementById("myLinks");
+                  if (x.style.display === "block") {
+                    x.style.display = "none";
+                  } else {
+                    x.style.display = "block";
+                  }
+                }
+                document.addEventListener("DOMContentLoaded", function() {
+                var dropdown = document.querySelector('.dropdown');
+                var dropdownContent = document.querySelector('.dropdown-content');
+                var timer;
+
+                dropdown.addEventListener('mouseenter', function() {
+                  clearTimeout(timer); // Clear any existing timeout
+                  dropdownContent.style.display = 'block'; // Show the dropdown menu
+                });
+
+                dropdown.addEventListener('mouseleave', function() {
+                  timer = setTimeout(function() {
+                    dropdownContent.style.display = 'none'; // Hide the dropdown menu after a delay
+                  }, 1000); // Adjust delay (in milliseconds) as needed
+                });
+
+                dropdownContent.addEventListener('mouseenter', function() {
+                  clearTimeout(timer); // Clear the timeout when mouse enters the dropdown menu
+                });
+
+                dropdownContent.addEventListener('mouseleave', function() {
+                  dropdownContent.style.display = 'none'; // Hide the dropdown menu when mouse leaves
+                });
+              });
+                </script>
+</body>
+</html>

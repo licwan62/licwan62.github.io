@@ -1,0 +1,93 @@
+
+/* HOME/INDEX PAGE STYLING! */
+html {
+  font-family: 'Trebuchet MS';
+}
+.fishBox {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.fish {
+  width: 50%;
+  margin-left: 48.5%;
+  height: auto;
+  border: 2px solid black;
+}
+.TextFish {
+  position: absolute;
+  font-family: 'Trebuchet MS';
+  text-align: center;
+  top: 20%;
+  left: 8%;
+  right: 60%;
+  font-size: 25px;
+}
+.p1 {
+  position: absolute;
+  font-size: 30px;
+  font-family: 'Trebuchet MS';
+}
+h4 {
+  color: green;
+  font-family: 'Trebuchet MS';
+}
+.ImgHome {
+  width: 100%;
+  height: auto; 
+  display: block; 
+  float: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Responsive adjustments 
+
+Some code is commented out, to change the image from on top, 
+see commented out code for both media sections.*/
+
+@media screen and (max-width: 800px) {
+  .fishBox {
+    /* flex-direction: column;  */
+    flex-direction: column-reverse; 
+    /* change column to column-reverse to put text atop image */
+    align-items: center;
+  }
+  .TextFish {
+    position: static;
+    width: 100%;
+    font-size: 15px;
+    padding: 10%;
+    padding-top: 5%;
+    text-align: center; /* Center-align text */
+  }
+  .fish {
+    width: 100%; /* Make image take full width */
+    max-width: none; /* Remove max-width */
+    margin-left: 0; /* Remove left margin */
+  }
+}
+@media screen and (max-width: 1310px) and (min-width: 801px) {
+  .fishBox {
+    /* flex-direction: column; */
+    flex-direction: column-reverse; 
+    /* change column to column-reverse to put text atop image */
+    align-items: center;
+  }
+  .TextFish {
+    position: static;
+    width: 100%;
+    font-size: 20px;
+    padding: 30px;
+    padding-top: 5%;
+    text-align: center; /* Center-align text */
+  }
+  .fish {
+    width: 100%; /* Make image take full width */
+    max-width: none; /* Remove max-width */
+    margin-left: 0; /* Remove left margin */
+  }
+}

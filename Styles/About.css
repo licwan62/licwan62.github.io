@@ -1,0 +1,92 @@
+/* ABOUT PAGE STYLING! */
+
+* {
+  font-family: 'Trebuchet MS';
+}
+.column1 {
+  float: left;
+  width: 50%; /* Each column takes 50% of the width */
+}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 1st image */
+.food {
+  width: 85%; /* Adjust the width as needed */
+  padding-left: 30px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* What is Rasia? heading */
+h2 {
+  color: black;
+  font-family: Arial;
+  margin-top: 0;
+  margin-bottom: 7px;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+/* Rasia - text in green */
+.green {
+  color: #1FC333;
+  margin-top: 0; /* Remove default margin */
+  margin-bottom: 20px;
+}
+/* What is Rasia paragraph */
+.p1 {
+  color: black;
+  font-family: Arial;
+  font-size: 20px;
+  padding-right: 30px;
+  margin-top: 0; /* Remove default margin */
+  margin-bottom: 13px;
+  padding-left: 30px;
+}
+
+/* paragraph under image */
+.p2 {
+  color: black;
+  font-family: Arial;
+  font-size: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-top: 0; /* Remove default margin */
+}
+
+/* About Me heading */
+.abouthead {
+  color: black;
+  font-family: Arial;
+  margin-top: 0;
+  padding-left: 30px;
+  margin-bottom: 7px;
+}
+.Aboutme {
+  color: black;
+  font-family: Arial;
+  font-size: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+  margin-top: 0; /* Remove default margin */
+}
+/* Media query for mobile devices */
+@media screen and (max-width: 1210px) {
+  .column1 {
+      width: 100%; /* Stack columns on top of each other */
+      padding: 0; /* Optional: adjust padding for a better fit */
+  }
+
+  .food {
+      width: 100%; /* Ensure the image takes full width */
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+}

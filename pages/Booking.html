@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Styles/AllPages.css">
+    <link rel="stylesheet" href="../Styles/Booking.css">
+    <title>Booking</title>
+</head>
+    <body>
+        <div class="navbar">
+        <a href="index.html" class="logo-link"><img class="logo" src="../images/Logo.png" alt="Go to home page"></a>
+          <div class="NavHead">
+            <a href="About.html">About</a>
+            <a href="Menu.html">Menu</a>
+            <a href="Booking.html">Booking</a>
+            <a href="Login.html">Login</a>
+        </div>
+          <div class="dropdown">
+              <a href="javascript:void(0);" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+              <br>
+              <br>
+              <br>
+              <br>
+            <div class="dropdown-content">
+              <div class="header"> 
+              <div class="row">
+                <div class="column">
+                  <a href="About.html">About</a>
+                  <a href="Menu.html">Menu</a>
+                  <a href="Booking.html">Booking</a>
+                  <a href="Login.html">Login</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+        
+        <p class="top-text">Please fill out our Event Enquiry form below so we can determine the best 
+          way for us to get you information about our catering services. You can also call us 
+          directly or email us and we will get right back to you. We look forward to hearing from you.</p>
+
+        <div class="container">
+          <form action="/action_page.php">
+            <div class="row">
+              <div class="col-25">
+                <label for="Fname">First Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Fname" name="FirstName" placeholder="Your first name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="Lname">Last Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Lname" name="LastName" placeholder="Your last name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="Email">Email</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Email" name="Email" placeholder="Your Email..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="Phone">Phone</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="Phone" name="Phone" placeholder="Your phone number..">
+              </div>
+            </div>
+            <br><br>
+            <div class="row">
+              <div class="col-25">
+                <label for="EDate">Event Date</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="EDate" name="EventDate" placeholder="Date of event.." required min="{{today}}">
+              </div>
+            </div>
+                <div class="row">
+              <div class="col-25">
+                <label for="ETime">Event Time</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="ETime" name="EventTime" placeholder="Time of event..">
+              </div>
+            </div>
+                <div class="row">
+              <div class="col-25">
+                <label for="NumAdults">Number of Adults</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="NumAdults" name="NumberOfAdults" placeholder="Number of Adults..">
+              </div>
+            </div>
+                    <div class="row">
+              <div class="col-25">
+                <label for="NumChildren">Number of Children</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="NumChildren" name="NumberOfChildren" placeholder="Number of Children..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="SPRequests">Event Info/Special Requests</label>
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" value="Send">
+            </div>
+          </form>
+        </div>
+
+        <footer>
+            <div class="footer">
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Menu.html">Menu</a></li>
+                        <li><a href="Booking.html">Booking</a></li>
+                        <li><a href="Login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contacts" id="contacts">
+                    <ul>
+                        <li><a>Contacts</a></li>
+                        <li><p><b>info@rasi.co.nz</b></p></li>
+                        <li><p><b>0210 452 333</b></p></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>    
+
+            <script>
+                function myFunction() {
+                  var x = document.getElementById("myLinks");
+                  if (x.style.display === "block") {
+                    x.style.display = "none";
+                  } else {
+                    x.style.display = "block";
+                  }
+                }
+                document.addEventListener("DOMContentLoaded", function() {
+                var dropdown = document.querySelector('.dropdown');
+                var dropdownContent = document.querySelector('.dropdown-content');
+                var timer;
+
+                dropdown.addEventListener('mouseenter', function() {
+                  clearTimeout(timer); // Clear any existing timeout
+                  dropdownContent.style.display = 'block'; // Show the dropdown menu
+                });
+
+                dropdown.addEventListener('mouseleave', function() {
+                  timer = setTimeout(function() {
+                    dropdownContent.style.display = 'none'; // Hide the dropdown menu after a delay
+                  }, 1000); // Adjust delay (in milliseconds) as needed
+                });
+
+                dropdownContent.addEventListener('mouseenter', function() {
+                  clearTimeout(timer); // Clear the timeout when mouse enters the dropdown menu
+                });
+
+                dropdownContent.addEventListener('mouseleave', function() {
+                  dropdownContent.style.display = 'none'; // Hide the dropdown menu when mouse leaves
+                });
+              });
+                </script>
+</body>
+</html>

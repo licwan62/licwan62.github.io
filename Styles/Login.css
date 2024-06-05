@@ -1,0 +1,90 @@
+/* LOGIN PAGE STYLING! */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('../images/Emerald-Background.avif');
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+label {
+  font-family: Arial, Helvetica, sans-serif;
+}
+input {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set height of viewport */
+}
+form {
+  border: 2px solid black;
+  width: 60%; /* Adjust width */
+  max-width: 400px; /* Set maximum width */
+  padding: 20px;
+  background-color: white; /* Set background color */
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none; /* Removed border */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%; /* Widened the button */
+  text-align: center;
+  display: block; /* Centered the button */
+  margin: auto; /* Centered the button */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+  background-color: green;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+
+.container {
+  padding: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+  text-align: right; /* Aligned to the right */
+  width: 100%; /* Full width */
+  display: block; /* Displayed as block */
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* CSS for Forgot Password link */
+span.psw a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Change color to black */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+}
