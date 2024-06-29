@@ -1,0 +1,104 @@
+.size{
+	width: 400px;
+	height: 240px;
+}
+#d1{
+	position: relative;
+	overflow: hidden;
+	float: left;
+	margin: 200px 0 0 100px;
+}
+#d2{
+	position: absolute;
+}
+#d2 img{
+	float: left;
+}
+#d3{
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+}
+#LeftArr,
+#RightArr{
+	opacity: .4;
+	transition: opacity .5s;
+}
+#LeftArr:hover,
+#RightArr:hover{
+	opacity: 1;
+}
+#d4{
+	position: relative;
+	width: 400px;
+	height:800px;
+	margin-left: 600px;
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+#d5{
+	position: absolute;
+	width: 380px;
+	height: 700px;
+	left: 10px;
+	top: 30px;
+	border: #000000 solid 1px;
+	box-sizing: border-box;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+#d6{
+	position: absolute;
+	bottom: 20px;
+	left: 50px;
+}
+.me,
+.rob{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.touxiang{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 0;
+}
+.time{
+	position: absolute;
+	font: italic 20px/35px "agency fb";
+	color: #878787;
+}
+.words{
+	padding: 10px;
+	margin-top: 35px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	max-width: 200px;
+	width: -webkit-fit-content;
+	background-color: #28f837;
+	font-weight: bold;
+}
+.me .touxiang{
+	background: url(../images/hd.jpg) no-repeat left top;
+	left: 0;
+	background-size: 100% 100%;
+}
+.me .words{
+	margin-left: 70px;
+}
+.me .time{
+	left: 70px;
+}
+.rob .touxiang{
+	background: url(../images/jqr.jpg) no-repeat right top;
+	background-size: 100% 100%;
+	right: 0;
+}
+.rob .words{
+	float: right;
+	margin-right: 70px;
+}
+.rob .time{
+	right: 70px;
+}

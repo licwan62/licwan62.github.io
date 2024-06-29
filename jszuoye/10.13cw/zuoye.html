@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>查找素数和水仙花数</title>
+		<script type="text/javascript">
+		var x,y;
+			function b1_click(){
+				
+				var i;
+				var x=inp01.value;
+				var y=inp02.value;
+				disp.innerHTML="";
+				for(i=x;i<=y;i++){
+					if(issushu(i))disp1(i);
+				}
+				disp.innerHTML+="233";
+			}
+			function issushu(n){
+				var i;
+				for(i=2;i<=n/2;i++)
+					if(n%i==0)return false;
+				return true;
+				
+			}
+			var m=0
+			function disp1(n){ 
+				m++;
+				disp.innerHTML+=n+" ";
+				if(m%5==0)disp.innerHTML+="<br>";
+			}
+		</script>
+		<script type="text/javascript">
+			var x,y;
+			function b2_click(){
+				demo.innerHTML=""
+				x=inp03.value;
+				y=inp04.value;
+				var i;
+				for(i=x;i<=y;i++){
+					if(issxhs(i))demo.innerHTML+=i+" ";
+				}
+			}
+			function issxhs(n){
+				var i,gw,bw,sw;
+				gw=n%10;
+				i=(n-gw)/10;
+				sw=i%10;
+				bw=(i-sw)/10;
+				return gw*gw*gw+sw*sw*sw+bw*bw*bw==n
+			}
+		</script>
+	
+	</head>
+	<body>
+		<h2>1．查找素数:</h2>
+		<p>素数一般指质数。<br />
+		质数是指在大于1的自然数中，除了1和它本身以外不再有其他因数的自然数。</p>
+		<b>请输入一个范围再点击按钮,程序将会显示范围内的所有素数</b><br /><br />
+		<div id="div1">
+			范围从: <input id="inp01" /><br>
+			范围至: <input id="inp02" /><br>	<br>
+			<button id="b1" onclick="b1_click()">查找素数</button><hr>
+			<div id="disp">
+				这里显示素数，每行5个
+			</div><hr>
+		</div>
+		<h2>2.查找水仙花数:</h2>
+		<p>水仙花数是指一个 3 位数，它的每个位上的数字的 3次幂之和等于它本身</p>
+			<b>请输入一个范围再点击按钮,程序将会显示范围内的所有水仙花数</b><br /><br />
+		<div id="div2">
+			范围从: <input id="inp03" /><br>
+			范围至: <input id="inp04" /><br><br />	
+			<button id="b2" onclick="b2_click()"> 查找水仙花数</button><hr>
+			<div id="demo">
+				这里显示水仙花数
+			</div>
+		<hr>
+		
+	</body>
+</html>
+<script src="../direct.js"></script>

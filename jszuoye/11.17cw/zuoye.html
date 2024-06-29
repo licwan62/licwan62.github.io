@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>11.19</title>
+		<style>
+			#div1 {
+				width: 100%;
+				background-color: #000000;
+				position: absolute;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+				vertical-align: middle;
+				display: table-cell;
+				text-align: center;
+			}
+
+			#div2 {
+				height: 120px;
+				width: 100%;
+				position: absolute;
+				left: 0;
+				background-color: white;
+				overflow: hidden;
+			}
+
+			#div3 {
+				height: 120px;
+				position: relative;
+			}
+
+			#div3 img {
+				width: 120px;
+				height: 100px;
+				margin: 10px 5px;
+			}
+
+			#div3 img.disp {
+				margin: 7px 2px;
+				border: blue 3px solid;
+			}
+		</style>
+		<script>
+			var imgarrs =
+				"tm/idx1_2.jpg,tm/idx1_4.jpg,tm/idx2_1.jpg,tm/idx2_2.jpg,tm/idx3_1.jpg,tm/idx4_1.jpg,tm/idx4_2.jpg,tm/idx5_1.jpg,tm/idx5_2.jpg,tm/idx6_1.jpg,tm/idx7_1.jpg,tm/idx7_3.jpg,tm/idx8_1.jpg,tm/idx8_2.jpg";
+			imgarrs += ",img/0.jpg,img/1.jpg,img/2.jpg,img/3.jpg,img/4.jpg,img/5.jpg,img/6.jpg,img/7.jpg,img/8.jpg,img/9.jpg"
+
+			onload = function() {
+				div1.style.height = screen.height - 140 + "px";
+				div2.style.top = div1.style.height;
+				add();
+			}
+			add = function() { //div3中显示一列图片;
+				var pics_src = imgarrs.split(",");
+				var pics = "";
+				console.info(pics_src)
+				for (var i = 0; i < pics_src.length; i++) {
+					pics += "<img src='" + pics_src[i] + "' onclick='show(this),picclick(this)'>";
+				}
+				div3.innerHTML = pics;
+			}
+			show = function(obj) { //obj显示在div1中,原始大小图片,并居中;
+				var cell = div1.getElementsByTagName("img")[0];
+				cell.src = obj.src;
+				cell.style.position = "absolute";
+				var d1_height = parseInt(div1.style.height);
+				var d1_width = screen.width;
+				var img_height = obj.naturalHeight;
+				var img_width = obj.naturalWidth;
+				console.info("obj.naturalWidth:"+obj.naturalWidth+"d1_width:"+ d1_width)
+				cell.style.top = d1_height / 2 - img_height / 2 + "px";
+				cell.style.left = d1_width / 2 - img_width / 2 + "px";
+				console.info("cell.src: " + cell.src)
+				console.info("top: " + cell.style.top + "left: " + cell.style.left)
+			}
+			var oldobj = "";
+			picclick = function(obj) { //选中图片加边框,在盒子中间
+				if (oldobj) oldobj.className = "";
+				obj.className = "disp";
+				oldobj = obj;
+				var cells = div3.getElementsByTagName("img");
+				for (var i = 0; i < cells.length; i++) {
+					if (obj.src == cells[i].src) {
+						var index = i;
+						console.info("index: " + index)
+						break;
+					}
+				}
+				var scrWid = screen.width;
+				var lef = scrWid / 2 - index * 130 - 65;
+				div3.style.width = cells.length * 130 + "px";
+				console.info("lef: " + lef + "; screen.width: " + screen.width)
+				div3.style.left = lef + "px";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1"><img></div>
+		<div id="div2">
+			<div id="div3"></div>
+		</div>
+
+	</body>
+</html>

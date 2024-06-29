@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AE作品</title>
+		<link rel="stylesheet" href="css/test.css">
+		<link rel="stylesheet" href="css/ziti.css">
+		<link rel="stylesheet" href="css/index.css">
+		<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="JS/index.js"></script>
+	</head>
+	<body>
+		<header style="background-color: #222;">
+			<div class="cont1">
+				<h1 align="right">欢迎来到王力成的网站</h1>
+				<p align="right">网站简陋，手打代码，学习用</p>
+			</div>
+			<div class="cont2">
+				<p class="ico"> //NEED CHANGE
+			</div>
+		</header>
+		<nav>
+			<ul id="nav_ul">
+				<li><a href="index.html">主页</a></li>
+				<li><a href="#">JS整理</a></li>
+				<li><a href="aework.html">AE作品</a></li>
+				<li><a href="2DGame.html">2D游戏</a></li>
+				<li><a href="#">本周一言</a></li>
+			</ul>
+		</nav>
+		<div id="container">
+			<aside>
+				<dl id="aside_dl_1" class="aside_dl">
+					//INPUT HERE
+				</dl>
+				<dl id="aside_dl_2" class="aside_dl">
+					//INPUT HERE
+				</dl>
+			</aside>
+			<footer style="background-color: #626262;"></footer>
+			<div id="main">
+				//INPUT HERE
+			</div>
+		</div>
+	</body>
+</html>
+

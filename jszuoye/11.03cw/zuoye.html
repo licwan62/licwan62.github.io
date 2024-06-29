@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="zuoye.js"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			#t1 {
+				color: white;
+				font-size: 36px;
+				text-align: center;
+			}
+
+			#b1 {
+				font-size: 24px;
+			}
+
+			#b2 {
+				font-size: 24px;
+				background: #009966;
+				color: white;
+			}
+
+			h2 {
+				margin: 0;
+				padding: 0;
+			}
+
+			h2 b {
+				color: red;
+			}
+		</style>
+
+		<table width=320 height="480" border=0 cellpadding=0 cellspacing=0 align="center">
+			<tr>
+				<td height="50" colspan=3 background="images/index2_01.jpg" id="t1">猜数游戏</td>
+			</tr>
+			<tr>
+				<td height="42" colspan=3>
+					<img src="images/index2_02.jpg" width=320 height=42 alt="">
+				</td>
+			</tr>
+			<tr>
+				<td width="35" height="277" background="images/index2_03.jpg">&nbsp;</td>
+				<td width="251" background="images/index2_04.jpg" id="t2" valign="top" align="center">
+					<h2 id="b1"></h2>
+					<h2 id="b2"></h2>
+				</td>
+				<td width="34" background="images/index2_05.jpg">&nbsp;</td>
+			</tr>
+			<tr>
+				<td height="111" colspan=3>
+					<img src="images/index2_06.jpg" alt="" width=320 height=111 border="0" usemap="#Map">
+				</td>
+			</tr>
+		</table>
+		<map name="Map">
+			<area shape="rect" coords="3,19,43,60" href="javascript:ss(0)">
+			<area shape="rect" coords="48,20,90,60" href="javascript:ss(1)">
+			<area shape="rect" coords="96,17,137,63" href="javascript:ss(2)">
+			<area shape="rect" coords="142,21,180,61" href="javascript:ss(3)">
+			<area shape="rect" coords="189,16,230,62" href="javascript:ss(4)">
+			<area shape="rect" coords="235,20,317,58" href="javascript:ss(10)">
+			<area shape="rect" coords="4,66,43,109" href="javascript:ss(5)">
+			<area shape="rect" coords="48,68,91,108" href="javascript:ss(6)">
+			<area shape="rect" coords="95,66,136,108" href="javascript:ss(7)">
+			<area shape="rect" coords="141,66,181,107" href="javascript:ss(8)">
+			<area shape="rect" coords="187,68,229,107" href="javascript:ss(9)">
+			<area shape="rect" coords="233,65,316,106" href="javascript:ss(20)">
+		</map>
+	</body>
+</html>
+<script src="../direct.js"></script>

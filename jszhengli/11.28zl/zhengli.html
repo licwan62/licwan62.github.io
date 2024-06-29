@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery基础语法</title>
+		<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/11-28.js"></script>
+		<script src="../direct.js"></script>
+		<style type="text/css">
+			#jumping {
+				font-size: 1.4rem;
+				position: relative;
+				animation: jump .8s infinite ease-in-out;
+				animation-direction: alternate
+			}
+
+			@keyframes jump {
+				from {
+					left: 0px;
+					color: #000;
+				}
+
+				to {
+					left: 20px;
+					color: #e63946;
+				}
+			}
+		</style>
+		<script language="Javascript">
+			document.oncontextmenu = new Function("event.returnValue=false");
+			document.onselectstart = new Function("event.returnValue=false");
+		</script>
+
+	</head>
+	<body>
+		<button>无情重置</button>
+		<hr>
+		<b>jQuery选择器,隐藏/显示</b>
+		<button id="b1" onclick="b1_click()">隐藏p1</button>
+		<button id="b2">隐藏p2</button>
+		<hr />
+		<b>jQuery遍历</b>
+		<button id="b3">加序号</button>
+		<br />
+		<span id="jumping">点击下列文字点击变色，双击回复</span>
+		<p id="p1">第一次萌战是生涩的，赛程一波三折漏洞百出，甚至规则都是一边比一边加的。</p>
+		<p class="p2">也就是这些临时加上的规则，对后续的萌战起到了深远影响。</p>
+		<p class="p3">萌有千差万别，各人都有自己的萌</p>
+		<p id="p4" class="p4" title="p4">不能因为自己的萌而去刻意否认他人的萌</p>
+		<p title="p5">赌上荣耀，为自己的萌投上干净的一票</p>
+		<dl>
+			<dt>萌战积分表</dt>
+			<dd>蕾姆</dd>
+			<dd>御坂美琴</dd>
+			<dd>秋山澪</dd>
+			<dd>雪之下雪乃</dd>
+			<dd>逢坂大河</dd>
+		</dl>
+	</body>
+</html>
+<script src="../direct.js"></script>
